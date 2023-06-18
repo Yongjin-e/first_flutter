@@ -5,6 +5,9 @@ class Conditional {
 
     String result = testGrade(80);
     print('testGrade result : $result');
+
+    String result2 = testSwitch(90);
+    print('testSwitch result2 : $result2');
   }
 
   int conditionalIf(int value) {
@@ -28,6 +31,27 @@ class Conditional {
       grade = 'B';
     } else if (score >= 70) {
       grade = 'C';
+    }
+
+    return grade;
+  }
+
+  String testSwitch(int score) {
+    String grade = 'F';
+
+    switch (score) {
+      case 90:
+        grade = 'A';
+        break;
+      case 80:
+        grade = 'B';
+        break;
+      case 70:
+        grade = 'C';
+        break;
+      default:
+        grade = 'no data';
+        break;
     }
 
     return grade;

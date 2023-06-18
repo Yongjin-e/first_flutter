@@ -4,6 +4,8 @@ import 'package:first_flutter/ch1/for_loop.dart';
 import 'package:first_flutter/ch1/method.dart';
 import 'package:first_flutter/ch1/operrator.dart';
 import 'package:first_flutter/ch1/variable.dart';
+import 'package:first_flutter/ch2/animal/bird.dart';
+import 'package:first_flutter/ch2/animal/dog.dart';
 import 'package:first_flutter/ch2/coffee/americano.dart';
 import 'package:first_flutter/ch2/coffee/latte.dart';
 import 'package:first_flutter/ch2/person.dart';
@@ -45,12 +47,23 @@ void main() {
   //
   // b.sum();
 
-  Americano americano = Americano('프리미엄 아메리카노',8000, false, false);
-  americano.sale();
-  americano.service();
-  americano.refund();
+  // Americano americano = Americano('프리미엄 아메리카노',8000, false, false);
+  // americano.sale();
+  // americano.service();
+  // americano.refund();
+  //
+  // Latte latte = Latte('저렴한 라떼', 1500, true, true);
+  // latte.service();
+  // latte.refund();
 
-  Latte latte = Latte('저렴한 라떼', 1500, true, true);
-  latte.service();
-  latte.refund();
+  // Conditional();
+
+  Bird bird1 = Bird('비둘기', 2);
+  bird1.run();
+
+  Dog dog1 = Dog(name: '국수', age: 7);
+  dog1.run();
+  dog1.swim();
+  dog1.eat();
+  dog1.sleep();
 }
