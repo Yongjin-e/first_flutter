@@ -1,9 +1,12 @@
 import 'package:first_flutter/ch3/column_screen.dart';
 import 'package:first_flutter/ch3/container_screen.dart';
+import 'package:first_flutter/ch3/image_screen.dart';
 import 'package:first_flutter/ch3/row_screen.dart';
 import 'package:first_flutter/ch3/scaffold_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
+import 'ch3/text_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -21,10 +24,12 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       body: Column(
         children: [
-          button(page: ContainerScreen(), name: 'Container'),
-          button(page: ColumnScreen(), name: 'Column'),
-          button(page: RowScreen(), name: 'Row'),
-          button(page: ScaffoldScrren(), name: 'Scaffolod'),
+          button(page: ContainerScreen(), name: 'ContainerScreen'),
+          button(page: ColumnScreen(), name: 'ColumnScreen'),
+          button(page: RowScreen(), name: 'RowScreen'),
+          button(page: ScaffoldScrren(), name: 'ScaffoldScrren'),
+          button(page: TextScreen(), name: 'TextScreen'),
+          button(page: ImageScreen(), name: 'ImageScreen'),
         ],
       ),
     );
