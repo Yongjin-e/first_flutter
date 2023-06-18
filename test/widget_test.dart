@@ -6,6 +6,10 @@ import 'package:first_flutter/ch1/operrator.dart';
 import 'package:first_flutter/ch1/variable.dart';
 import 'package:first_flutter/ch2/animal/bird.dart';
 import 'package:first_flutter/ch2/animal/dog.dart';
+import 'package:first_flutter/ch2/car/benz.dart';
+import 'package:first_flutter/ch2/car/car.dart';
+import 'package:first_flutter/ch2/car/genesis.dart';
+import 'package:first_flutter/ch2/car/sonata.dart';
 import 'package:first_flutter/ch2/coffee/americano.dart';
 import 'package:first_flutter/ch2/coffee/latte.dart';
 import 'package:first_flutter/ch2/person.dart';
@@ -58,12 +62,31 @@ void main() {
 
   // Conditional();
 
-  Bird bird1 = Bird('비둘기', 2);
-  bird1.run();
+  // Bird bird1 = Bird('비둘기', 2);
+  // bird1.run();
+  //
+  // Dog dog1 = Dog(name: '국수', age: 7);
+  // dog1.run();
+  // dog1.swim();
+  // dog1.eat();
+  // dog1.sleep();
 
-  Dog dog1 = Dog(name: '국수', age: 7);
-  dog1.run();
-  dog1.swim();
-  dog1.eat();
-  dog1.sleep();
+  Benz benz = Benz(15000, '벤츠 S클래스', '홍길동');
+  benz.run();
+  benz.stop();
+  benz.sell();
+  benz.repair();
+
+  Genesis genesis = Genesis(8000, '제네시스 G80', '손오공');
+  genesis.run();
+  genesis.stop();
+  genesis.carWash();
+  genesis.sell();
+
+  Sonata sonata = Sonata(3000, '소나타', '테스터');
+  sonata.run();
+  sonata.stop();
+  sonata.refuel();
+  sonata.sell();
+
 }
