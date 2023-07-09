@@ -8,6 +8,7 @@ class UiExam extends StatefulWidget {
 }
 
 class _UiExamState extends State<UiExam> {
+  int _currentIndex = 0;
   final PageController pageController = PageController();
 
   @override
@@ -23,29 +24,16 @@ class _UiExamState extends State<UiExam> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: _appBar(),
-      body: _body(),
-      bottomNavigationBar: BottomNavigationBar(
-        onTap: (index) {
-          setState(() {
-            _index = index;
-          });
-        },
-        currentIndex: _index,
-        items: <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            label: '홈',
-            icon: Icon(Icons.home),
-          ),
-          BottomNavigationBarItem(
-            label: '이용서비스',
-            icon: Icon(Icons.assignment),
-          ),
-          BottomNavigationBarItem(
-            label: '내 정보',
-            icon: Icon(Icons.account_circle),
-          ),
+      body: IndexedStack(
+        index: _currentIndex,
+        children: [
+          _body(),
+          Container(color: Colors.green),
+          Container(color: Colors.blue),
         ],
+          //
       ),
+      bottomNavigationBar: _bottomNav(),
     );
   }
 
@@ -167,5 +155,40 @@ class _UiExamState extends State<UiExam> {
         contentPadding: EdgeInsets.symmetric(horizontal: 12),
       );
     });
+  }
+
+  Widget _bottomNav() {
+    return BottomNavigationBar(
+      currentIndex: _currentIndex,
+      onTap: (value) {
+        setState(() {
+          _currentIndex = value;
+        });
+      },
+      showSelectedLabels: true,
+      showUnselectedLabels: true,
+      backgroundColor: Colors.orange.shade50,
+      iconSize: 30,
+      selectedItemColor: Colors.pink,
+      unselectedItemColor: Colors.grey.shade500,
+      // type: BottomNavigationBarType.shifting,
+      items: const [
+        BottomNavigationBarItem(
+          icon: Icon(Icons.home_outlined),
+          activeIcon: Icon(Icons.home),
+          label: '홈',
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.alarm_off),
+          activeIcon: Icon(Icons.access_alarm),
+          label: '알림',
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.person_outline),
+          activeIcon: Icon(Icons.person),
+          label: '친구',
+        ),
+      ],
+    );
   }
 }
