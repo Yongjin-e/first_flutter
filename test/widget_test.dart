@@ -14,6 +14,7 @@ import 'package:first_flutter/ch2/coffee/americano.dart';
 import 'package:first_flutter/ch2/coffee/latte.dart';
 import 'package:first_flutter/ch2/person.dart';
 import 'package:first_flutter/ch2/product.dart';
+import 'package:first_flutter/ch4/null_safety.dart';
 
 
 void main() {
@@ -71,22 +72,34 @@ void main() {
   // dog1.eat();
   // dog1.sleep();
 
-  Benz benz = Benz(15000, '벤츠 S클래스', '홍길동');
-  benz.run();
-  benz.stop();
-  benz.sell();
-  benz.repair();
+  // Benz benz = Benz(15000, '벤츠 S클래스', '홍길동');
+  // benz.run();
+  // benz.stop();
+  // benz.sell();
+  // benz.repair();
+  //
+  // Genesis genesis = Genesis(8000, '제네시스 G80', '손오공');
+  // genesis.run();
+  // genesis.stop();
+  // genesis.carWash();
+  // genesis.sell();
+  //
+  // Sonata sonata = Sonata(3000, '소나타', '테스터');
+  // sonata.run();
+  // sonata.stop();
+  // sonata.refuel();
+  // sonata.sell();
 
-  Genesis genesis = Genesis(8000, '제네시스 G80', '손오공');
-  genesis.run();
-  genesis.stop();
-  genesis.carWash();
-  genesis.sell();
+  var nullSafety = NullSafety();
 
-  Sonata sonata = Sonata(3000, '소나타', '테스터');
-  sonata.run();
-  sonata.stop();
-  sonata.refuel();
-  sonata.sell();
+  nullSafety.age = 100;
+  nullSafety.name = '테스터';
+
+  nullSafety.age2 = 200;
+  nullSafety.name2 = null;
+
+  NullSafety ns2;
+
+
 
 }
