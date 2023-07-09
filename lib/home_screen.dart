@@ -13,6 +13,10 @@ import 'ch4/listview_screen.dart';
 import 'ch4/pageview_screen.dart';
 import 'ch4/single_scroll_screen.dart';
 import 'ch4/text_form_field_screen.dart';
+import 'ch5/bottom_navigation_bar_screen.dart';
+import 'ch5/default_tab_controller_screen.dart';
+import 'ch5/tabbar_screen.dart';
+import 'ch5/ui_exam.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -43,6 +47,10 @@ class _HomeScreenState extends State<HomeScreen> {
             button(page: ListviewScreen(), name: 'Listview'),
             button(page: GridViewScreen(), name: 'GridView'),
             button(page: PageViewScreen(), name: 'PageView'),
+            button(page: TabBarScreen(), name: 'TabBar'),
+            button(page: DefaultTabControllerScreen(), name: 'DefaultTabController'),
+            button(page: UiExam(), name: 'UiExam'),
+            button(page: BottomNavigationBarScreen(), name: 'BottomNavigationBar'),
           ],
         ),
       ),
@@ -52,7 +60,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget button({required Widget page, required String name}) {
     return Container(
       width: double.infinity,
-      height: 60,
+      height: 50,
       margin: const EdgeInsets.symmetric(vertical: 10),
       child: ElevatedButton(
           onPressed: () {
